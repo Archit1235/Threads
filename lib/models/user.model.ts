@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
   id: { type: String, required: true },
@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  commmunities: [
+  communities: [
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Community",
